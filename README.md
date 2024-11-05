@@ -68,13 +68,13 @@ This recipe deploys the vLLM container image. Follow the vLLM docs to pass the c
 There are 3 recipes that we are providing out of the box. Following are example recipe.json snippets that you can use to deploy the recipes quickly for a test run.
 |Recipe|Scenario|Sample JSON|
 |----|----|----
-|LLM Inference using NVIDIA shapes and vLLM|Deployment with default Llama-3.1-8B model using PAR|View sample JSON here [here](./inference-with-vLLM.json)
-|MLCommons Llama-2 Quantized 70B LORA Fine-Tuning on A100|Default deployment with model and dataset ingested using PAR|View sample JSON here [here](./inference-with-vLLM.json)
-|LORA Fine-Tune Recipe|Open Access Model Open Access Dataset Download from Huggingface (no token required)|View sample JSON [here](./inference-with-vLLM.json)
-|LORA Fine-Tune Recipe|Closed Access Model Open Access Dataset Download from Huggingface (Valid Auth Token Is Required!!)|View sample JSON [here](./inference-with-vLLM.json)
-|LORA Fine-Tune Recipe|Bucket Model Open Access Dataset Download from Huggingface (no token required)|View sample JSON [here](./inference-with-vLLM.json)
-|LORA Fine-Tune Recipe|Get Model from Bucket in Another Region / Tenancy using Pre-Authenticated_Requests (PAR) Open Access Dataset Download from Huggingface (no token required)|View sample JSON [here](./inference-with-vLLM.json)
-|LORA Fine-Tune Recipe|Bucket Model Bucket Checkpoint Open Access Dataset Download from Huggingface (no token required)|View sample JSON [here](./inference-with-vLLM.json)
+|LLM Inference using NVIDIA shapes and vLLM|Deployment with default Llama-3.1-8B model using PAR|View sample JSON here [here](./vllm_inference_sample_recipe.json)
+|MLCommons Llama-2 Quantized 70B LORA Fine-Tuning on A100|Default deployment with model and dataset ingested using PAR|View sample JSON here [here](./mlcommons_lora_finetune_nvidia_sample_recipe.json)
+|LORA Fine-Tune Recipe|Open Access Model Open Access Dataset Download from Huggingface (no token required)|View sample JSON [here](./open_model_open_dataset_hf.backend.json)
+|LORA Fine-Tune Recipe|Closed Access Model Open Access Dataset Download from Huggingface (Valid Auth Token Is Required!!)|View sample JSON [here](./closed_model_open_dataset_hf.backend.json)
+|LORA Fine-Tune Recipe|Bucket Model Open Access Dataset Download from Huggingface (no token required)|View sample JSON [here](./bucket_model_open_dataset_hf.backend.json)
+|LORA Fine-Tune Recipe|Get Model from Bucket in Another Region / Tenancy using Pre-Authenticated_Requests (PAR) Open Access Dataset Download from Huggingface (no token required)|View sample JSON [here](./bucket_par_open_dataset.backend.json)
+|LORA Fine-Tune Recipe|Bucket Model Bucket Checkpoint Open Access Dataset Download from Huggingface (no token required)|View sample JSON [here](./bucket_checkpoint_bucket_model_open_dataset.backend.json)
 
 ## Undeploy a Recipe
 `POST /undeploy`
