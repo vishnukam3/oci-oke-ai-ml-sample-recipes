@@ -1,0 +1,43 @@
+{
+  "recipe_id": "llm_inference_nvidia",
+  "deployment_name": "myvLLM inference on NVIDIA",
+  "recipe_mode": "service",
+  "recipe_node_shape": "BM.GPU.A10.4",
+  "service_endpoint_domain": "58c883bd-8cac404e.mel.carl-downs.com",
+  "recipe_container_port": "8000",
+  "recipe_replica_count": 1,
+  "recipe_nvidia_gpu_count": 2,
+  "recipe_ephemeral_storage_size": 50,
+  "recipe_node_pool_size": 1,
+  "recipe_node_boot_volume_size_in_gbs": 200,
+  "recipe_shared_memory_volume_size_limit_in_mb": 200,
+  "input_object_storage": [
+    {
+        "par": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/iv-8F3oSRJ8nsbVaq9ev9kjfkZ3zXItSOCSDWKfRa7zT3aPmNf4MijL_4nw_hvvY/n/iduyx1qnmway/b/corrino_hf_oss_models/o/",
+        "mount_location": "/models",
+        "volume_size_in_gbs": 500,
+        "include": ["NousResearch/Meta-Llama-3.1-8B-Instruct"]
+    }
+  ],
+  "recipe_image_uri": "iad.ocir.io/iduyx1qnmway/corrino-devops-repository:vllmv0.6.2",
+  "recipe_container_command_args": [
+    "--model",
+    "$(Model_Path)",
+    "--tensor-parallel-size",
+    "$(tensor_parallel_size)"
+  ],
+  "recipe_container_env": [
+    {
+      "key": "tensor_parallel_size",
+      "value": "2"
+    },
+    {
+      "key": "model_name",
+      "value": "NousResearch/Meta-Llama-3.1-8B-Instruct"
+    },
+    {
+      "key": "Model_Path",
+      "value": "/models/NousResearch/Meta-Llama-3.1-8B-Instruct"
+    }
+  ]
+}
