@@ -1,6 +1,6 @@
 # Corrino Recipe Documentation
 ## Deploy a Recipe
-`POST /deploy`
+`POST /deployment`
 ### Request Body
 | Parameter | Type | Required | Description
 |-----------|------|----------|-------------
