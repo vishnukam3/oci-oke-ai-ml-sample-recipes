@@ -13,7 +13,7 @@
   "recipe_shared_memory_volume_size_limit_in_mb": 200,
   "input_object_storage": [
     {
-        "par": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/iv-8F3oSRJ8nsbVaq9ev9kjfkZ3zXItSOCSDWKfRa7zT3aPmNf4MijL_4nw_hvvY/n/iduyx1qnmway/b/corrino_hf_oss_models/o/",
+        "par": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/2XvHbnyWCffrIwLyv-nYtIt3sJN8AavIzPbMtd4ZJBVQqxY128b6cIUIHC9jhNQg/n/iduyx1qnmway/b/corrino_hf_oss_models/o/",
         "mount_location": "/models",
         "volume_size_in_gbs": 500,
         "include": ["NousResearch/Meta-Llama-3.1-8B-Instruct"]
