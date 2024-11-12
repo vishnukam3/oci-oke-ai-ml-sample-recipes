@@ -3,7 +3,6 @@
   "deployment_name": "vLLM inference on NVIDIA",
   "recipe_mode": "service",
   "recipe_node_shape": "BM.GPU.A10.4",
-  "service_endpoint_domain": "58c883bd-8cac404e.mel.carl-downs.com",
   "recipe_container_port": "8000",
   "recipe_replica_count": 1,
   "recipe_nvidia_gpu_count": 2,
