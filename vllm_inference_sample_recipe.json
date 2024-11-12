@@ -1,6 +1,6 @@
 {
   "recipe_id": "llm_inference_nvidia",
-  "deployment_name": "myvLLM inference on NVIDIA",
+  "deployment_name": "vLLM inference on NVIDIA",
   "recipe_mode": "service",
   "recipe_node_shape": "BM.GPU.A10.4",
   "service_endpoint_domain": "58c883bd-8cac404e.mel.carl-downs.com",
