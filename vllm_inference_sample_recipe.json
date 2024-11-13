@@ -2,7 +2,7 @@
   "recipe_id": "llm_inference_nvidia",
   "deployment_name": "vLLM inference on NVIDIA",
   "recipe_mode": "service",
-  "recipe_node_shape": "BM.GPU.A10.4",
+  "recipe_node_shape": "VM.GPU.A10.2",
   "recipe_container_port": "8000",
   "recipe_replica_count": 1,
   "recipe_nvidia_gpu_count": 2,
