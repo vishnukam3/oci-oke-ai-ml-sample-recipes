@@ -3,7 +3,7 @@
 `POST /deployment`
 ### Request Body
 | Parameter | Type | Required | Description
-|-----------|------|----------|-------------
+|-----------|------|----------|------------
 | recipe_id | string | Yes | One of the following: `llm_inference_nvidia`, `lora_finetune_nvidia`, or  `mlcommons_lora_finetune_nvidia`
 | deployment_name | string | Yes | Any deployment name to identify the deployment details easily. Must be unique from other recipe deployments.
 | recipe_mode | string | Yes | One of the following: `service` or `job`. Enter `service` for inference recipe deployments and `job` for fine-tuning recipe deployments.
