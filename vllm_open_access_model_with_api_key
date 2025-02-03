@@ -7,7 +7,7 @@
     "recipe_container_env": [
         {
             "key": "VLLM_API_KEY",
-            "value": "gUYcdmNICJwigtvNsnpRwXfhfX"
+            "value": "<ANY-API-KEY-HERE>"
         }
     ],
     "recipe_replica_count": 1,
