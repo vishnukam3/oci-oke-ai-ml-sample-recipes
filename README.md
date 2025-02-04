@@ -1,3 +1,4 @@
+
 # Corrino Recipe Documentation
 ## Deploy a Recipe
 `POST /deployment`
@@ -21,6 +22,7 @@
 | recipe_image_uri | string | Yes | Location of the recipe container image. Each recipe points to a specific container image. See the recipe.json examples below. Example: `iad.ocir.io/iduyx1qnmway/corrino-devops-repository:vllmv0.6.2`
 | recipe_container_command_args | string | No | Container init arguments to pass. Each recipe has specific container arguments that it expects. See the Recipe Arguments section below for details. Example: `["--model","$(Model_Path)","--tensor-parallel-size","$(tensor_parallel_size)"]`
 | recipe_container_env | string | No | Values of the recipe container init arguments. See the Recipe Arguments section below for details. Example: `[{"key": "tensor_parallel_size","value": "2"},{"key": "model_name","value": "NousResearch/Meta-Llama-3.1-8B-Instruct"},{"key": "Model_Path","value": "/models/NousResearch/Meta-Llama-3.1-8B-Instruct"}]`
+| skip_capacity_validation | boolean | No | Determines whether validation checks on shape capacity are performed before initiating deployment. If your deployment is failing validation due to capacity errors but you believe this not to be true, you should set `skip_capacity_validation` to be `true` in the recipe JSON to bypass all checks for Shape capacity.
 
 ### Recipe Container Arguments
 #### LLM Inference using NVIDIA shapes and vLLM
@@ -113,4 +115,4 @@ In an object storage bucket in the sandbox tenancy.
 **Is this built on top of OKE?** Yes. 
 
 ## Running into any issues?
-Contact Vishnu Kammari at vishnu.kammari@oracle.com 
+Contact Vishnu Kammari at vishnu.kammari@oracle.com or Grant Neuman at grant.neuman@oracle.com
